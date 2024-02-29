@@ -1,0 +1,92 @@
+/** DO YOU LOVE CSS? 
+Share your love with the rest of the CSS community by contributing to Style Stage - a modern CSS showcase styled by community contributions
+@link stylestage.dev 
+**/
+
+$t: rgba(255, 0, 0, 0);
+$w: rgba(255, 255, 255, 0.98);
+
+
+.sticker {
+  --c1: #ef548f;
+  --c2: #ef8b6d;
+  --c3: #cfef6b;
+  --c4: #3bf0c1;
+  --c5: #bc13fe;
+  --light-neon-purple: #f6e8fe;
+  --neon-pink: #F535AA;
+  --shine-angle: 15deg;
+  display: inline-grid;
+  grid-template-areas: "text";
+  place-items: center;
+  font-family: "Englebert", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: clamp(3rem, 8vw, 10rem);
+  // text-transform: uppercase;
+  color: var(--neon-pink);
+  margin-top: 40px;
+  &-lg {
+    font-size: clamp(4rem, 30vw, 8rem);
+  }
+
+  span {
+    // background: linear-gradient(
+    //     var(--shine-angle),
+    //     $t 0%,
+    //     $t 35%,
+    //     $w 49.95%,
+    //     $w 50.15%,
+    //     $t 65%,
+    //     $t
+    //   ),
+    //   linear-gradient(
+    //     to right,
+    //     var(--c1),
+    //     var(--c2),
+    //     var(--c3),
+    //     var(--c4),
+    //     var(--c5)
+    //   );
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    // -webkit-text-stroke: 0.01em rgba(0, 0, 0, 0.6);
+    // // FUn fact - letter-spacing messes with the ability of the
+    // // gradient to cover all the text :(
+  }
+
+  & > *,
+  &::before,
+  &::after {
+    grid-area: text;
+  }
+
+  &::before,
+  &::after {
+    content: attr(data-text);
+    color: var(--light-neon-purple);
+  }
+
+  &::before {
+    -webkit-text-stroke: 0.21em var(--light-neon-purple);
+    background: no-repeat linear-gradient(var(--light-neon-purple), var(--light-neon-purple)) 15% 50% / 85% 60%;
+
+    // Original failed attempt
+    // letter-spacing: -0.04em;
+    // transform: scale(1.12) translateX(-0.02em) translateY(0.002em);
+    // text-shadow: 0.002em 0.002em 0.02em rgba(0, 0, 0, 0.75);
+    // -webkit-text-stroke: 0.001em rgba(0, 0, 0, 0.6);
+  }
+
+  &::after {
+    text-shadow: 0.07em 0.08em 0.05em rgba(0, 0, 0, 0.75),
+      -0.07em -0.05em 0.05em rgba(0, 0, 0, 0.75);
+    z-index: -2;
+  }
+}
+
+.subtitle {
+   font-family: "Englebert", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
