@@ -1,9 +1,29 @@
 .img-spongebob {
-    width: 100px;
-    height: auto;
+  width: 100px;
+  height: auto;
+}
+
+.preview-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.preview {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  min-height: 100px;
 }
 
 .preview-label {
-    font-size: 1.3rem;
-    margin-top: 0;
+  font-family: "Englebert", cursive;
+  font-size: 1.3rem;
+  margin-top: 0;
+}
+
+@media (max-width: 500px) {
+  .preview {
+    flex-direction: column;
+  }
 }

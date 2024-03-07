@@ -1,67 +1,136 @@
 .button {
-    color: black;
-    background-color: var(--green);
-    border-radius: 24px;
-    padding: 12px 24px;
-    font-weight: 600;
-    font-size:1.1rem;
-    outline: 0;
-    border: 0;
-    box-shadow: none;
-    cursor: pointer;
-    place-self: flex-end;
+  color: black;
+  background-color: var(--green);
+  border-radius: 24px;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
 
-    &:hover {
-       transition: 100ms;
-       filter: brightness(95%);
-    }
+  &:hover {
+    transition: 100ms;
+    filter: brightness(95%);
+  }
+
+  &:disabled {
+    background-color: #d3cbcb;
+    cursor: not-allowed;
+  }
 }
 
+.button-link {
+  color: black;
+  background-color: transparent;
+  border-radius: 24px;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+
+  &:hover {
+    transition: 100ms;
+    filter: brightness(95%);
+    text-decoration: underline;
+  }
+}
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  column-gap: 24px;
+
+  & button {
+    flex-basis: 50%;
+  }
+}
 .form-wrapper {
-    place-self: center;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    column-gap: 5vw;
-    padding: 40px;
+  place-self: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  column-gap: 5vw;
+  padding: 40px;
 }
 
 .label {
-    font-size: 1.3rem;
+  font-family: "Englebert", cursive;
+  font-size: 1.3rem;
 }
 .radio-wrapper {
-     flex-basis: 50%;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     flex-direction: column;
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-     & .label {
-        margin: 0 0 24px;
-    }
+  & .label {
+    margin: 0 0 24px;
+  }
 }
 .input-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    row-gap: 24px;
-    flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  row-gap: 24px;
+  flex-basis: 50%;
 
-    & .label {
-        margin: 0;
-        place-self: flex-start;
-    }
+  & .label {
+    margin: 0;
+    place-self: flex-start;
+  }
 }
 
 textarea {
-    width: 100%;
-    min-height: 150px;
-    border-radius: 8px;
+  width: 75%;
+  min-height: 150px;
+  border-radius: 8px;
+  padding: 12px;
 
-    &:focus-visible {
-        outline-color: var(--orange);
-        border: 0;
-        box-shadow: none;
+  &:focus-visible {
+    outline-color: var(--orange);
+    border: 0;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .form-wrapper {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  .input-wrapper {
+    flex-basis: 100%;
+  }
+
+  textarea {
+    width: 90%;
+    max-width: 100%;
+  }
+
+  .button-wrapper {
+    flex-wrap: wrap;
+    row-gap: 24px;
+
+    & button {
+      flex-basis: 100%;
     }
+  }
 }
