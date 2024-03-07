@@ -25,7 +25,7 @@ export function Form() {
     if (Array.isArray(converted)) {
       converted = converted.join("");
     }
-    navigator.clipboard.writeText(converted);
+    window.navigator.clipboard.writeText(converted);
   }
   return (
     <>
