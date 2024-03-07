@@ -39,7 +39,7 @@ const scriptCharMap = {
   9: "0x1D7E1",
 };
 
-export default {
+const transforms = {
   abomination: function (value) {
     luni.tools.creepify.options.top = true; // add diacritics on top. Default: true
     luni.tools.creepify.options.middle = true; // add diacritics in the middle. Default: true
@@ -114,3 +114,6 @@ export default {
     return `${String.fromCodePoint("0x2728")} ${joined.split("").join(" ")} ${String.fromCodePoint("0x2728")}`;
   },
 };
+
+
+export default transforms

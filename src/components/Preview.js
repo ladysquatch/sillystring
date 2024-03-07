@@ -31,7 +31,7 @@ export function Preview({ type, userText }) {
           {type === "spongebob" ? (
             <img
               src="/spongebob.png"
-              alt="mocking spongebob image"
+              alt="mocking spongebob"
               className="img-spongebob"
             />
           ) : (
