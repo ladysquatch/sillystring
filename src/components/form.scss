@@ -72,6 +72,8 @@
 .label {
   font-family: "Englebert", cursive;
   font-size: 1.3rem;
+
+ 
 }
 .radio-wrapper {
   flex-basis: 50%;
@@ -103,6 +105,7 @@ textarea {
   min-height: 150px;
   border-radius: 8px;
   padding: 12px;
+  font-size: 1rem;
 
   &:focus-visible {
     outline-color: var(--orange);
@@ -119,6 +122,11 @@ textarea {
   .input-wrapper {
     flex-basis: 100%;
   }
+  .choose {
+    place-self: flex-start;
+  }
+
+
 
   textarea {
     width: 90%;

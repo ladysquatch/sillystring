@@ -31,7 +31,7 @@ export function Form() {
     <>
       <div className="form-wrapper">
         <div className="radio-wrapper">
-          <h2 className="label">Choose your format</h2>
+          <h2 className="label choose">Choose your format</h2>
 
           <Radio
             value="spongebob"

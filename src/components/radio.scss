@@ -62,3 +62,11 @@ input[type="radio"]:focus {
   // outline: max(2px, 0.15em) solid currentColor;
   // outline-offset: max(2px, 0.15em);
 }
+
+
+@media (max-width: 500px) {
+ .form-control {
+  justify-content: flex-start;
+  text-align: left;
+ }
+}
